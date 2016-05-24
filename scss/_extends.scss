@@ -1,0 +1,105 @@
+/***********************************************************
+                        	Mixin
+************************************************************/
+/*   3     #    */
+
+@mixin text($size, $color :null, $text-align :null, $weight :null, $letter-spacing :null, $line-height :null) {
+	font-size: $size;
+	line-height: $line-height;
+	font-weight: $weight;
+	color: $color;
+	text-align: $text-align;
+	letter-spacing: $letter-spacing;
+}
+
+@mixin background-content($icon, $size, $position :null) {
+	background-image: url('../img/#{$icon}');
+	background-size: $size;
+	background-position: $position;
+	content: '';
+	z-index: 1;
+	position: relative;
+	background-repeat: no-repeat;
+}
+
+@mixin buttonless($width, $height) {
+	border: none;
+	background-color: transparent;
+	width: $width;
+	height: $height;
+	padding: 0;
+}
+
+@mixin background_image ($img) {
+	background-image: url("../img/#{$img}");
+    width: 75px;
+    height: 75px;
+    top: 2.75em;
+    left: 0;
+    content:'';
+    background-size: cover;
+    z-index: 1;
+    position: absolute;
+	background-repeat: no-repeat;
+}
+
+
+/***********************************************************
+                      Place Holders
+************************************************************/
+
+
+%content-border {
+    border: 1px solid white;
+    box-shadow: 0px 3px 10px #DEDEDE;
+}
+
+%underline {
+	content: '';
+	position: absolute;
+	width: 26px;
+	border-bottom: 1px solid black;
+	left: 0;
+	bottom: -6px;
+}
+
+
+
+/***********************************************************
+                      	  Colors
+************************************************************/
+
+
+$white   						: #fff;
+$black							: #000;
+$gray							: #7E7E7E;
+$wisteria						: #8E6BAF;
+$alabaster						: #FAFAFA;
+
+
+/***********************************
+           Colors-Function
+************************************/
+/*   3     #    */
+
+/******** Header ********/
+$color-nav-pages-a				: $gray;
+$color-nav-pages-border			: $black;
+$color-profile-name				: $gray;
+$color-nav-page-content-a		: $white;
+$color-nav-page-content-back	: $wisteria;
+$color-page-content-pill		: $wisteria;
+$color-nav-page-content-pill-a	: $white;
+
+/******** Content ********/
+$color-content-back				: $alabaster;
+$color-section-back				: $white;
+$color-section-p				: $gray;
+$color-save						: $white;
+$color-save-back				: $black;
+$color-textarea-border			: $gray;
+$color-post						: $wisteria;
+$color-add-comment				: $black;
+$color-textarea-focus			: $wisteria;
+$color-can-edit					: $gray;
+$color-add-comment-hover		: $wisteria;

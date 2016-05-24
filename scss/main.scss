@@ -1,0 +1,552 @@
+/********************************************************
+                         Header
+********************************************************/
+
+
+@import "_extends.scss";
+
+body {
+    box-sizing: border-box;
+}
+
+.container {
+
+    @media screen and (min-width: 1200px) {
+        width: 90%;
+    }
+
+    @media screen and (min-width: 1380px) {
+        width: 80%;
+    }
+}
+
+.nav-global {
+    padding-top: 1em;
+
+    .nav-site {
+
+/*************************
+         nav-home
+**************************/
+
+        .nav-home {
+            display: inline-block;
+            padding: 0;
+            height: 3em;
+            padding-right: 3em;
+            border-right: 1px solid black;
+
+            @media screen and (min-width: 1200px) {
+                float: left!important;
+       		}
+
+            .dropdown-menu {
+                left: 0;
+            }
+
+            .icon-plant-arrow {
+                @include background-content('plant-arrow.png', initial);
+                @include buttonless(5em, 4em);
+                bottom: 0.2em;
+
+            }
+
+            .icon-home {
+                @include background-content('home.png', initial, center);
+                @include buttonless(1.625em, 1.625em);
+                bottom: -1em;
+                margin-left: 2em;
+            }
+
+            .icon-notifications {
+                @include background-content('notification.png', initial, center);
+                @include buttonless(1.625em, 1.625em);
+                bottom: -1em;
+                margin-left: 2em;
+            }
+        }
+
+/*************************
+         nav-pages
+**************************/
+
+        .nav-pages {
+            display: block;
+            position: relative;
+
+            @media screen and (min-width: 1200px) {
+                display: inline-block;
+            }
+
+            .nav-pages-ul {
+                list-style: none;
+
+                @media screen and (min-width: 1200px) {
+                    margin-left: 3em;
+           		}
+
+                 .nav-pages-li {
+                     display: inline;
+
+                     &.active a {
+                         background-color: $color-page-content-pill;
+                         color: $color-nav-page-content-pill-a;
+                     }
+
+                     &:not(:first-child){
+                         margin-left: 3em;
+                     }
+
+                     a {
+                         color: $color-nav-pages-a;
+                         font-size: 1.15em;
+                         text-decoration: none;
+                     }
+                 }
+            }
+        }
+    }
+
+/*************************
+        nav-account
+**************************/
+
+    .nav-account {
+        display: inline-block;
+
+        .nav-account-content {
+            float: right;
+
+            .button + .button {
+                margin: 0 1.5em 0 2em;
+            }
+
+            .search {
+                @include background-content('loop.png', initial);
+                @include buttonless(1.2em, 1.3em);
+                bottom: -1.3em;
+                right: 2em;
+            }
+
+            .profile-picture {
+                @include background-content('profile-picture.png', initial);
+                @include buttonless(4em, 4em);
+            }
+
+            .profile-name {
+                color: $color-profile-name;
+                font-size: 1.25em;
+                margin-left: 0.5em;
+                text-decoration: none;
+
+                &::after {
+                @include background-content('drop-down.png', cover);
+                position: absolute;
+                right: 0;
+                height: 0.5em;
+                top: 9px;
+                }
+            }
+        }
+    }
+}
+
+/*************************
+     nav-page-content
+**************************/
+
+.nav-page-content {
+        background-color: $color-nav-page-content-back;
+
+    .nav-page-content-div {
+        width: 100%;
+        padding: 1em 0;
+
+        @media screen and (min-width: 1200px) {
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-nav-page-content-a;
+            display: inline-block;
+            font-size: 1.5em;
+            font-weight: 200;
+            margin: 0 2em;
+
+            &:hover {
+                border-bottom: 2px solid $color-nav-page-content-a;
+                margin-bottom: -2px;
+            }
+        }
+    }
+}
+
+/********************************************************
+                         Content
+********************************************************/
+
+.wrapper {
+    background-color: $color-content-back;
+    min-height: 50em;
+    padding: 3em 0 15em;
+
+    .container {
+
+        .content {
+
+            .section {
+                @extend %content-border;
+                display: inline-block;
+                margin-top: 2em;
+                background-color: $color-section-back;
+                width: 100%;
+                padding: 0 1.75em;
+
+                h3 {
+                    display: inline-block;
+                    position: relative;
+                    margin: 1.5em 0.75em 0.75em;
+                    font-size: 20px;
+
+                    &::after {
+                        @extend %underline;
+                    }
+                }
+            }
+
+            /*************************
+                 section-members
+            **************************/
+
+            .section-members {
+                min-height: 28em;
+
+                .members-body {
+                    text-align: center;
+                    margin-top: 1em;
+
+                    .member {
+                        list-style: none;
+
+                        .member-picture {
+                            height: 12em;
+
+                            &.avatar-1 {
+                                @include background-content('1.png', contain, center);
+                            }
+
+                            &.avatar-2 {
+                                @include background-content('2.png', contain, center);
+                            }
+
+                            &.avatar-3 {
+                                @include background-content('3.png', contain, center);
+                            }
+
+                            &.avatar-4 {
+                                @include background-content('4.png', contain, center);
+                            }
+                        }
+
+                        .member-name {
+
+                            h4 {
+                                font-size: 20px;
+                            }
+                        }
+
+                        .member-join {
+
+                            p {
+                                font-size: 1.1em;
+                                color: $color-section-p;
+                            }
+                        }
+
+                        .member-footer {
+
+                            button + button {
+                                margin-left: 0.75em;
+                            }
+
+                            .view {
+                                @include background-content('eye.png', cover, center);
+                                @include buttonless(1.25em, 1.25em)
+                            }
+
+                            .edit {
+                                @include background-content('pen.png', cover, center);
+                                @include buttonless(1.25em, 1.25em)
+                            }
+                        }
+                    }
+                }
+            }
+
+            /*************************
+                  Section-Admin
+            **************************/
+
+            // TODO: Add Big-Man Background
+
+            .section-admin {
+                min-height: 28em;
+
+                .admin-info {
+                    margin: 1em 0.9em 2em;
+                    min-height: 8em;
+                    font-size: 1.2em;
+                    color: $color-section-p
+                }
+
+                li + li {
+                    margin-left: 2.2em;
+                }
+
+                h5 {
+                    margin-left: 2.2em;
+                    font-size: 1.25em;
+                    font-weight: 600;
+                }
+
+                .email-ul {
+                    list-style: none;
+                    margin: 0;
+
+                    .email-li {
+                        display: inline-block;
+
+                        p {
+                            font-size: 1.25em;
+                            color: $color-section-p;
+                        }
+                    }
+                }
+
+                .status-ul {
+                    list-style: none;
+                    margin: 0;
+
+                    .status-li {
+                        display: inline-block;
+
+                        .dropdown {
+
+                            button {
+                                border: none;
+                            	background-color: transparent;;
+                            	padding: 0;
+                                background-image: none;
+                                vertical-align: initial;
+                                display: inline-block;
+                                box-shadow: none;
+                                font-size: 1.25em;
+                                color: $color-can-edit;
+
+                            }
+                        }
+                    }
+                }
+
+                .save-button {
+
+                    button {
+                        float: right;
+                        color: $color-save;
+                        background-color: $color-save-back;
+                        background-image: none;
+                        display: inline-block;
+                        padding: 3px 14px;
+                        letter-spacing: 2px;
+                        border-radius: 11px;
+                        font-weight: 100;
+                    }
+                }
+            }
+
+            .section-comments {
+
+                .comment {
+                    padding: 4em 7.5em 2em 7.25em;
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid black;
+                        padding-top: 4em;
+                    }
+
+                    .post-time {
+                        margin: 0;
+                        color: $color-section-p;
+                    }
+
+                    .comment-name {
+                        font-size: 1.25em;
+                        margin-top: 0.25em;
+                    }
+
+                    .commented {
+                        margin: 2em 0;
+                        color: $color-section-p;
+                        font-size: 1.2em;
+                        font-weight: 200;
+                    }
+
+                    .comment-section {
+                    	padding-bottom: 0.5em;
+                    	border: 1px solid $color-textarea-border;
+                        margin-bottom: 0.5em;
+                    	display: none;
+
+                    	.textarea {
+                    		width: 100%;
+                    		min-height: 7em;
+                    		box-sizing: border-box;
+                    		outline: none;
+                    		margin-bottom: 6px;
+                    		border: none;
+                            font-size: 1.2em;
+
+                    			&:focus {
+                    			    border: 1px solid $color-textarea-focus;
+                    			    box-shadow: 0px 0px 2px 2px $color-textarea-focus;
+                    		}
+                    	}
+
+                    	.comment-section-footer {
+                    		list-style: none;
+                    		margin: 0;
+                    		border: none;
+                    		height: 1em;
+                            position: relative;
+
+                    		.attachments {
+                    			float: left;
+                    			display: inline-block;
+
+                    			.attachment {
+                    				float: left;
+                    				display: inline-block;
+                    				margin-left: 1em;
+                    			}
+
+                    			.photo {
+                    				background-image: url('../img/camera.png');
+                    				border:none;
+                    				background-size: contain;
+                    				height: 1em;
+                    				width: 1em;
+                    				background-color: initial;
+                    				background-position-y: center;
+                    			}
+
+                    			.video {
+                    				background-image: url('../img/video.png');
+                    				border: none;
+                    				background-size: contain;
+                    				height: 1em;
+                    				width: 1.2em;
+                    				background-color: initial;
+                    				background-position-y: center;
+                    				background-repeat: no-repeat;
+                    			}
+                    		}
+
+                    		.footer-button {
+                    			float: right;
+                    			display: inline-block;
+                                bottom: -4px;
+                                position: absolute;
+                                right: -6px;
+
+                    			.post-button {
+                    				border-radius: 0.6em;
+                    				margin: 0;
+                    				font-size: 0.8em;
+                    			    padding: 2px 12px;
+                    		        margin-right: 1em;
+                    		        background-color: $color-post;
+                                    font-weight: 600;
+                    		        border: none;
+                    			}
+                    		}
+                    	}
+                    }
+                }
+
+                .comment-1 {
+			    	position: relative;
+
+			    	&::before {
+			    		@include background-image('2.png');
+			    	}
+
+			    	.add-comment {
+
+			    	}
+				}
+
+			    .comment-2 {
+			    	position: relative;
+
+			    	&::before {
+			    		@include background-image('3.png');
+			    	}
+			    }
+
+			    .comment-3 {
+			    	position: relative;
+		    	    margin-bottom: 60px;
+
+			    	&::before {
+			    		@include background-image('4.png');
+			    	}
+			    }
+			}
+        }
+    }
+}
+
+// FIXME: Clean up the code below
+
+
+
+
+.disable {
+	display: block!important;
+}
+
+.add-comment {
+    position: absolute;
+    right: 0px;
+    top: 33px;
+    color: $color-add-comment;
+    font-weight: 400;
+    font-size: 1.15em;
+
+    &:hover {
+        color: $color-add-comment-hover;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+// Hack to solve the outline issue.
+#outline {
+	content: '';
+	position: absolute;
+
+	&:focus {
+		outline: none;
+	}
+};
+
+.outline-hover {
+    &:hover {
+        outline: none;
+    }
+}
+// Hack to solve the outline issue.
