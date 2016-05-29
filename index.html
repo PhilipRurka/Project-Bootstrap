@@ -5,15 +5,29 @@
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
+    	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     	<link rel="stylesheet" type="text/css" href="css/main.css">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
         <header>
-            <div class="container">
+            <div class="container container-1">
                 <div class="nav-global row">
+                    <div class="overlay">
+                        <div class="burger">
+                            <div class="overlay-container">
+                                <h3>Home</h3>
+
+                            </div>
+
+
+
+
+
+
+                        </div>
+                    </div>
                     <nav class="nav-site col-lg-9">
                         <ul class="nav navbar-nav navbar-right nav-home">
                             <li class="dropdown">
@@ -58,7 +72,7 @@
                 </div>
             </div>
             <nav class="nav-page-content">
-                <div class="nav-page-content-div col-md-offset-1">
+                <div class="nav-page-content-div">
                     <a href="#">PANEL</a>
                     <a href="#">POG</a>
                     <a href="#">ADMIN</a>
@@ -68,13 +82,13 @@
         </header>
         <div class="wrapper">
             <div class="container">
-                <div class="content col-lg-7">
+                <div class="content-members content col-lg-7">
                     <section class="section section-members">
                         <div class="section-header members-header">
                             <h3>TEAM MEMBERS</h3>
                         </div>
                         <div class="members-body">
-                            <ul class="member col-md-3">
+                            <ul class="member col-sm-3 col-xs-6">
                                 <li class="member-picture avatar-1"></li>
                                 <li class="member-name"><h4>Isabelle Curtis</h4></li>
                                 <li class="member-join"><p>Since 10/18/2015</p></li>
@@ -83,7 +97,7 @@
                                     <button class="edit" type="button" name="Edit"></button>
                                 </li>
                             </ul>
-                            <ul class="member col-md-3">
+                            <ul class="member col-sm-3 col-xs-6">
                                 <li class="member-picture avatar-2"></li>
                                 <li class="member-name"><h4>Marie Dupont</h4></li>
                                 <li class="member-join"><p>Since 06/25/2015</p></li>
@@ -92,7 +106,7 @@
                                     <button class="edit" type="button" name="Edit"></button>
                                 </li>
                             </ul>
-                            <ul class="member col-md-3">
+                            <ul class="member col-sm-3 col-xs-6">
                                 <li class="member-picture avatar-3"></li>
                                 <li class="member-name"><h4>Angelique De Costes</h4></li>
                                 <li class="member-join"><p>Since 08/11/2014</p></li>
@@ -101,7 +115,7 @@
                                     <button class="edit" type="button" name="Edit"></button>
                                 </li>
                             </ul>
-                            <ul class="member col-md-3">
+                            <ul class="member col-sm-3 col-xs-6">
                                 <li class="member-picture avatar-4"></li>
                                 <li class="member-name"><h4>Philippe Duberger</h4></li>
                                 <li class="member-join"><p>Since 07/16/2015</p></li>
@@ -113,46 +127,48 @@
                         </div>
                     </section>
                 </div>
-                <div class="content col-lg-5">
+                <div class="content-admin content col-lg-5 col-md-6">
                     <section class=" section section-admin">
-                        <div class="section-header members-header">
-                            <h3>ADD A NEW ADMINISTRATOR</h3>
-                        </div>
-                        <p class="admin-info">An admin is able to orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-                        <ul class="email-ul">
-                            <li class="email-li"><h5>Email</h5></li>
-                            <li class="email-li"><p>GiveMe@Nexus5X.ca</p></li>
-                        </ul>
-                        <ul class="status-ul">
-                            <li class="status-li"><h5>Status</h5></li>
-                            <li class="status-li">
-                                <div class="dropdown">
-                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                        can edit
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="save-button col-md-12">
-                            <button type="button" class="btn btn-default navbar-btn">SAVE</button>
+                        <div class="big-man">
+                            <div class="section-header admin-header">
+                                <h3>ADD A NEW ADMINISTRATOR</h3>
+                            </div>
+                            <p class="admin-info">An admin is able to orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                            <ul class="email-ul">
+                                <li class="email-li"><h5>Email</h5></li>
+                                <li class="email-li"><p>GiveMe@Nexus5X.ca</p></li>
+                            </ul>
+                            <ul class="status-ul">
+                                <li class="status-li"><h5>Status</h5></li>
+                                <li class="status-li">
+                                    <div class="dropdown">
+                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                            can edit
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="save-button">
+                                <button type="button" class="btn btn-default navbar-btn">SAVE</button>
+                            </div>
                         </div>
                     </section>
                 </div>
-                <div class="content col-lg-8">
+                <div class="content-comments content col-lg-8">
                     <section class="section section-comments">
                         <div class="section-header comments-header">
                             <h3>COMMENTS</h3>
                         </div>
     					<div class="comment-1 comment">
-    						<p class="post-time">2 min ago</p>
+    						<p class="post-time">323 min ago</p>
     						<h2 class="comment-name">Marie Dupont</h2>
     						<p class="commented">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth</p>
     						<a href='#' class="add-comment">Add Comment</a>
@@ -171,7 +187,7 @@
     					</div>
     					<div class="floating-border"></div>
     					<div class="comment-2 comment">
-    						<p class="post-time">6:30</p>
+    						<p class="post-time">5:23</p>
     						<h2 class="comment-name">Angelique De Costes</h2>
     						<p class="commented">No one rejects, dislikes, or avoids pleasure itself, because it is pleasure</p>
     						<a href='#' class="add-comment">Add Comment</a>
@@ -190,7 +206,7 @@
     					</div>
     					<div class="floating-border"></div>
     					<div class="comment-3 comment">
-    						<p class="post-time">Sun, 5 Nov</p>
+    						<p class="post-time">Mon, 23 May</p>
     						<h2 class="comment-name">Philippe Duberger</h2>
     						<p class="commented">Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise</p>
     						<a href='#' class="add-comment">Add Comment</a>
@@ -208,22 +224,66 @@
     						</div>
     					</div>
                     </section>
-                    <section class="section-list">
-
+                </div>
+                <div class="content-list content col-lg-4 col-md-6">
+                    <section class="section section-list">
+                        <div class="section-header list-header">
+                            <h3>TO-DO LIST</h3>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            <p>vero eos et accusamus et iusto</p>
+                            <div class="box"></div>
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            <p>cum soluta nobis est eligendi optio</p>
+                            <div class="box"></div>
+                          </label>
+                        </div>
+                        <div class="checkbox disabled">
+                          <label class="disabled">
+                            <input class='disabled' type="checkbox" value="" disabled>
+                            <p class="disabled">Give up on the 5X dream?</p>
+                            <div class="box"></div>
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            <p>harum quidem rerum facilis</p>
+                            <div class="box"></div>
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            <p>blanditiis praesentium voluptatum</p>
+                            <div class="box"></div>
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">
+                            <p>ut aut reiciendis voluptatibus</p>
+                            <div class="box"></div>
+                          </label>
+                        </div>
                     </section>
                 </div>
             </div>
         </div>
-
         <footer>
 
         </footer>
         <!-- Hack to solve the outline issue. -->
         <div id="outline"><a href=''></a></div>
         <!-- Hack to solve the outline issue. -->
-    	<script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        	<script src="js/script.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    	<script src="js/script.js"></script>
     </body>
 
 </html>

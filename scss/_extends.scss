@@ -13,7 +13,7 @@
 }
 
 @mixin background-content($icon, $size, $position :null) {
-	background-image: url('../img/#{$icon}');
+	background-image: url('../img/#{$icon}')!important;
 	background-size: $size;
 	background-position: $position;
 	content: '';
@@ -103,3 +103,4 @@ $color-add-comment				: $black;
 $color-textarea-focus			: $wisteria;
 $color-can-edit					: $gray;
 $color-add-comment-hover		: $wisteria;
+$color-disabled					: $gray;

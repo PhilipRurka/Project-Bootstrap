@@ -7,6 +7,7 @@
 
 
 
+
 /***********************************************************
                       Append + CSS + Hide
 ************************************************************/
@@ -34,12 +35,13 @@ $('.box li').click(function(event) {
 	$(this).toggleClass('checked');
 });
 
+// Hack to solve the outline issue.
 $('button').each(function() {
 	$(this).click(function(event) {
 		$('#outline a').focus();
 	});
 });
-
+// Hack to solve the outline issue.
 
 $('.add-comment').each(function() {
 	$(this).click(function (event) {
@@ -57,6 +59,15 @@ $('.add-comment').each(function() {
 		}
 	});
 })
+
+$('.checkbox label').each(function(){
+	$(this).mousedown(function(){
+		if ( !$(this).parent('.checkbox').hasClass('disabled') ) {
+			$(this).find('.box').toggleClass('checked-mark');
+		};
+	});
+});
+
 /*****************
        Key
 *****************/
@@ -70,11 +81,30 @@ $('.add-comment').each(function() {
 ************************************************************/
 /*   3     #    */
 
+$(window).on("resize", function() {
+
+    if($(window).width() < 1200) {
+
+        $(".content-list").insertBefore($(".content-members"));
+        $(".content-admin").insertBefore($(".content-list"));
+
+    } else {
+
+        $(".content-comments").insertBefore($(".content-list"));
+        $(".content-admin").insertBefore($(".content-comments"));
+        $(".content-members").insertBefore($(".content-admin"));
+
+    }
+
+}).resize();
+
+
 // Hack to solve the outline issue.
 $('a, button').each(function(){
 	$(this).addClass('outline-hover');
 });
 // Hack to solve the outline issue.
+
 
 
 
