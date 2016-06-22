@@ -13,7 +13,7 @@
 }
 
 @mixin background-content($icon, $size, $position :null) {
-	background-image: url('../img/#{$icon}')!important;
+	background-image: url('../img/#{$icon}');
 	background-size: $size;
 	background-position: $position;
 	content: '';

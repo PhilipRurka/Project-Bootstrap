@@ -32,7 +32,7 @@
 
 $('.box li').click(function(event) {
 	event.preventDefault();
-	$(this).toggleClass('checked');
+	$(this).toggleClass('checked-mark');
 });
 
 // Hack to solve the outline issue.

@@ -15,7 +15,7 @@ body {
         padding-left: 1em;
     }
 
-    @media screen and (min-width: 1410px) {
+    @media screen and (min-width: 1430px) {
         width: 80%;
     }
 }
@@ -30,6 +30,7 @@ body {
 
 
     .overlay {
+        display: none;
         content: '';
         background-color: rgba(0, 0, 0, 0.8);
         top: 0;
@@ -37,10 +38,23 @@ body {
         right: 0;
         left: 0;
         z-index: 3;
-        position: absolute;;
+        position: fixed;
 
-        .burger {
+        .mobile-nav {
 
+            .mobile-nav-h1 {
+
+                h1 {
+                    font-size: 1em;
+                }
+            }
+
+            .search-bar {
+
+                &:after {
+
+                }
+            }
         }
     }
 
@@ -168,8 +182,8 @@ body {
             }
 
             .search {
-                @include background-content('loop.png', initial);
-                @include buttonless(1.2em, 1.3em);
+                @include background-content('loop.svg', contain);
+                @include buttonless(1.5em, 1.5em);
                 bottom: -1.3em;
                 right: 2em;
             }
@@ -185,12 +199,8 @@ body {
                 margin-left: 0.5em;
                 text-decoration: none;
 
-                &::after {
-                @include background-content('drop-down.png', cover);
-                position: absolute;
-                right: 0;
-                height: 0.5em;
-                top: 9px;
+                span {
+                    margin-left: 3px;
                 }
             }
         }
@@ -218,7 +228,7 @@ body {
             width: 1170px;
         }
 
-        @media screen and (min-width: 1410px) {
+        @media screen and (min-width: 1430px) {
             width: 80%;
         }
 
@@ -316,18 +326,7 @@ body {
 
                     .member {
                         list-style: none;
-                        float: left;
                         margin-bottom: 3em;
-
-                        @media screen and (min-width: 1200px) {
-                            width: 14em;
-                        }
-
-                        @media screen and (max-width: 768px) {
-                            &:nth-child(2n+1) {
-                                clear: both;
-                            }
-                        }
 
                         @media screen and (max-width: 455px) {
                             float: none;
